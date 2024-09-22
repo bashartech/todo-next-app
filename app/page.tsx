@@ -40,6 +40,7 @@ setTodos(todos.map(todo =>todo.id === id ? {...todo, done: !todo.done }: todo))
          {
           todos.map(todo =>( 
           <li
+            key={todo.id} 
           onClick={()=> markTodoDone(todo.id)}
            className= {`text-3xl ml-5 cursor-pointer ${todo.done ? "line-through" : "no-underline"}`} >
             {todo.vlaue}
